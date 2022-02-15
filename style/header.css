@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(100deg, #696969 25%, #000 40%, transparent 100%), url("/img/fundo.jpg");
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    color: #faf604;
+}
+
+/* HEADER */
+
+header{
+    width: 96%;
+    height: 500px;
+    margin-top: 5px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+}
+
+.left{
+    width: 33%;
+    height: 500px;
+    z-index: 10px;
+}
+.portifolio, .vazio, .name{
+    background-color: #000;
+}
+.portifolio{
+    height: 50px;
+    font-size: 1.2em;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vazio{
+    height: 250px;
+}
+.vazio p{
+    color: #696969;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    padding: 20px 0 0 20px;
+    letter-spacing: 10px;
+    line-height: 15px;
+}
+.name{
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.name h1, h3{
+    position:relative;
+    z-index: 10px;
+    width: 400px;
+    margin-left: 120px;
+    font-weight: bolder;
+    color: #faf604;
+    text-shadow: #000 2px 2px;
+}
+.name h3:last-child{
+    width: 250px;
+    height: 45px;
+    background-color: #faf604;
+    font-size: 15px;
+    color: #000;
+    text-shadow: none;
+    font-weight: bolder;
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right{
+    width: 67%;
+    height: 500px;
+}
+.menu{
+    height: 50px;
+    background-color: #000;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.list-menu{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color:#fff;
+    font-weight: bolder;
+}
+.home{
+    border-bottom: 5px solid #faf604;
+}
+.home:hover{
+    border-bottom: none;
+}
+.about:hover, .project:hover, .clone:hover, .contact:hover{
+    border-bottom: 5px solid #faf604;
+}
+
+.foto1{
+    background-image: linear-gradient(0deg, #fff 20%, #696969 50%, #000 95%);
+    height: 450px;
+    z-index: -10px;
+    display: flex;
+    justify-content: end;
+}
+.foto1 img{
+    z-index: -10px;
+}
+
+@media screen and (max-width: 920px){
+    
+   
+}
