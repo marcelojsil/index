@@ -1,13 +1,25 @@
 section{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 
     margin-top: 30px;
     width: 96%;
-    height: 500px;
+    
     color: #fff;
+}
+.aboutme-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 550px;
+}
+
+h1{
+    font-weight: bolder;
+    color: #faf604;
 }
 .aboutleft{
     width: 50%;
