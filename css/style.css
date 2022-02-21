@@ -244,7 +244,8 @@ article:not(:last-of-type) {
 
 .soft-skills {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: ;
   padding: 0 8px;
 }
 
@@ -253,7 +254,9 @@ article:not(:last-of-type) {
   border-radius: 8px;
   padding: 8px;
   text-align: center;
-  width: calc(25% - 8px);
+  width: calc(25% - 5px);
+  margin: 5px 0 0 5px;
+  height: 90px;
 }
 
 .soft-skill-rating {
