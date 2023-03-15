@@ -3,7 +3,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
   }
   
   :root{
@@ -11,12 +10,12 @@
     --blue: #007692;
     --marine: #040222;
     --back: #f7f7f7;
-    --border: none; /*1px solid var(--marine);*/
+    --border: none; /*1px solid var(--back);*/
   }
 body {
-  background-color: var(--fundo);
-  z-index: -1px;
-  color: var(--marine);
+  background-image: linear-gradient(to bottom, transparent 10%, var(--fundo), var(--fundo)),
+                   url(../img/fundo_main.jpg);
+  color: var(--back);
   font-family: 'Josefin Sans', sans-serif;
   display: flex;
   flex-direction: column;
@@ -28,28 +27,13 @@ a:link, a:active, a:visited {
   color: var(--back);
 }
 
-/* === Tamanho e Alinhamentos das Seções === */
+
+/* === Tamanho e Alinhamentos das Seções Pais=== */
 
 header, section, footer {
   border: var(--border);
   width: 96vw;
   display: flex;
-}
-.menu-superior {
-  justify-content:center;
-  align-items:center;
-  height: 7vh;
-  color: var(--blue);
-}
-.social-links, .menu {
-  border: var(--border);
-  width: 48%;
-}
-.menu {
-  text-align: end;
-}
-.menu-superior a {
-  margin: 0 10px 0 10px;
 }
 section {
   flex-direction: column;
@@ -57,9 +41,8 @@ section {
   align-items: center;
 }
 .about, .expirence, .study-course, .ability, .portfolio {
-  border: var(--border);
-  width: 92vw;
-  height: 90vh;
+  width: 96vw;
+  height: 85vh;
 }
 footer {
   height: 7vh;
@@ -67,6 +50,29 @@ footer {
 
 /* === Menu Superior === */
 
+.menu-superior {
+  margin: 10px 0 10px 0;
+  width: 96vw;
+  height: 7vh;
+  justify-content:space-between;
+  align-items:center;
+  color: var(--blue);
+}
+.social-links, .menu {
+  background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3));
+  height: 7vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 35vh;
+}
+.social-links {
+  width: 20vw;
+}
+.menu {
+  width: 45vw;
+  text-align: end;
+}
 a i{
   font-size: 25px;
   color: var(--back);
@@ -78,23 +84,80 @@ a:hover{
   color: var(--blue);
 }
 
-/* === Seção: about === */
+
+/* === Sobre === */
 
 .about {
-  background-image: linear-gradient(to top, transparent 0%, var(--fundo) 100%),
-                   url(../img/fundo_main.jpg);
+  background-image: linear-gradient(rgba(0,0,0,.95),rgba(0,0,0,.95));
+  border-radius: 30px 30px 0 0;
+  margin: 10px 0 10px 0;
+  color: var(--back);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-sup {
+  width: 96%;
+  height: 80%;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+}
+.img, .sup-txt {
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img {
+  width: 30%;
+  justify-content: center;
+  
+}
+.sup-txt {
+  width: 35%;
+  justify-content: space-evenly;
+}
+
+
+
+/* === Experiência === */
+
+.expirence, .study-course, .ability, .portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
 }
 
 .expirence {
   background-color: #040222;
+  color: var(--back);
+}
+
+/* === Estudos e Cursos === */
+
+.study-course {
+  background-color: #626170;
+}
+
+/* === Habilidades === */
+
+.ability {
+  background-color: #756de0;
+}
+
+/* === Portifólio === */
+
+.portfolio {
+  background-color: #24242e;
 }
 
 
 
-/* === Foto e Informações Pessoais === */
-
-
-/* ===>>> RESPONSIVIDADE <<<=== */
+/* ============================ */
+/* ===>>> RESPONSIVIDADE <<<=== 
 
 @media (max-width: 740px) {
   .about {
@@ -102,3 +165,6 @@ a:hover{
     background-color: var(--fundo);
   }
 }
+
+
+*/
