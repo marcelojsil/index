@@ -17,8 +17,8 @@
 body {
   background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),
                    url(../img/fundo_main.jpg);
-  background-repeat:space;
-  background-size:cover;
+  background-attachment:fixed;
+  background-size:100%;
   color: var(--cor05);
   font-family: 'Josefin Sans', sans-serif;
 }
@@ -33,15 +33,27 @@ a:link, a:active, a:visited {
 body, header, section, footer {
   display: flex;
 }
-body {
+body, section {
   flex-direction: column;
 }
-body {
+body, section {
   justify-content: center;
   align-items: center;
 }
 header, section, footer {
-  width: 98vw;
+  width: 88vw;
+}
+.about,.experience,.study-course,.ability,.portfolio {
+  border: var(--border);
+  width: 88vw;
+  height: 88vh;
+}
+.experience,.study-course,.ability,.portfolio {
+  margin-top: 8vh;
+}
+footer {
+  width: 88vw;
+  height: 11vh;
 }
 
 /* ===================== */
@@ -108,6 +120,11 @@ a:hover,a i:hover{
 
 /* ======================= */
 /* ===>>> SOBRE MIM <<<=== */
+
+
+
+
+
 
 
 
