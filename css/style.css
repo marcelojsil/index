@@ -15,7 +15,7 @@
     --border: 1px solid var(--cor05);
   }
 body {
-  background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),
+  background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
                    url(../img/fundo_main.jpg);
   background-attachment:fixed;
   background-size:100%;
@@ -28,25 +28,35 @@ a:link, a:active, a:visited {
 }
 
 /* ======================================== */
-/* === DISPLAY E LAGURAS ELEMENTOS PAIS === */
+/* === DISPLAY FLEXBOX TOTAL E LAGURAS ELEMENTOS PAIS === */
 
-body, header, section, footer {
+body,header,section,footer,.about,.about-right,.name,.experience,.areas,
+.areas-tec,.areas-con,.areas-ind,.study-course {
   display: flex;
 }
-body, section {
+body,section,.about-right,.experience {
   flex-direction: column;
 }
-body, section {
+body,section,.name,.experience
+.areas-tec,.areas-con,.areas-ind,.study-course   {
   justify-content: center;
+}
+.about,.areas {
+  justify-content: space-around;
+}
+.about-right,.study-course {
+  justify-content: space-evenly;
+}
+body,section,.about,.about-right,.experience,.areas,.study-course {
   align-items: center;
 }
 header, section, footer {
   width: 88vw;
 }
 .about,.experience,.study-course,.ability,.portfolio {
-  border: var(--border);
   width: 88vw;
   height: 88vh;
+  background-image: linear-gradient(rgba(0,0,0,.92),rgba(0,0,0,.92));
 }
 .experience,.study-course,.ability,.portfolio {
   margin-top: 8vh;
@@ -121,27 +131,78 @@ a:hover,a i:hover{
 /* ======================= */
 /* ===>>> SOBRE MIM <<<=== */
 
+.about {
+  border-radius: 0 2em 0 2em;
+}
+.about-right,.about-left {
+  width: 46%;
+  height: 85%;
+}
+.carroussel {
+  width: 90%;
+  height: 70%;
+}
+.name {
+  width: 90%;
+  height: 15%;
+}
+.name p {
+  align-self: center;
+}
+.about-right,.about-left,.carroussel,.name{
+  border: var(--border);
+}
 
+/* ========================= */
+/* ===>>> EXPERIÊNCIA <<<=== */
 
+.areas {
+  border: var(--border);
+  width: 100%;
+  height: 90%;
+}
+.areas-tec,.areas-con,.areas-ind {
+  border: var(--border);
+  width: 30%;
+  height: 30%;
+}
+.areas-tec p,.areas-con p,.areas-ind p {
+  align-self: center;
+}
 
+/* ============================== */
+/* ===>>> ESTUDOS E CURSOS <<<=== */
 
+.school,.result {
+  border: var(--border);
+  width: 48%;
+  height: 98%;
+}
 
 
 
 /* ============================ */ 
 /* ============================ */
 /* ===>>> RESPONSIVIDADE <<<=== */
+/* ============================ */ 
+/* ============================ */
 
 @media (max-width: 1027px) {
   
-  .menu-superior {height: 4vh; }
-  .menu {display: none;  }
+  .menu-superior {height: 4vh;}
+  .menu {display: none;}
   .menu-resp {
     padding-top: 12vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 100;
   }
+  .about {flex-direction: column; border-radius: 0; z-index: -10px;}
+  .carroussel {width: 100%;}
+  .about-right,.about-left { width: 80vw; }
+
+  .experience {z-index: -100px;}
 
 }
